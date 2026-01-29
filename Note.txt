@@ -1,0 +1,32 @@
+1. Using f-strings (Recommended)
+python
+Copy
+
+result = 5 * 1.33
+formatted_result = f"{result:.5f}"
+print(formatted_result)  # Output: 6.65000
+
+2. Using the format function
+python
+Copy
+
+result = 5 * 1.33
+formatted_result = "{0:.5f}".format(result)
+print(formatted_result)  # Output: 6.65000
+
+3. Using % formatting
+python
+Copy
+
+result = 5 * 1.33
+formatted_result = "%.5f" % result
+print(formatted_result)  # Output: 6.65000
+
+4. Using the format function (alternative)
+python
+Copy
+
+result = 5 * 1.33
+formatted_result = format(result, ".5f")
+print(formatted_result)  # Output: 6.65000
+
