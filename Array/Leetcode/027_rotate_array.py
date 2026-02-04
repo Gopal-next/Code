@@ -1,3 +1,4 @@
+# rotate array
 def rotate_array(nums,k):
     n = k%len(nums)
 
