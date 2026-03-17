@@ -11,4 +11,3 @@ def left_right_sum(nums):
     return result
 
 print(left_right_sum(nums = [10,4,8,3]))
-
