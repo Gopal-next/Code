@@ -14,6 +14,7 @@ def max_subarray(nums):
     #     max_sum = max(max_sum, current_sum)
     #     if current_sum < 0:
     #         current_sum = 0
+    
     # return max_sum
 
 # Example usage:
