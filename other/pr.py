@@ -68,25 +68,38 @@ from collections import Counter
 
 # ops = ["5","2","C","D","+"]
 
-# a = '-6'
-# print(a.lstrip('-').isdigit())
-def diagonal(mat):
-    summ = 0
-    for i in range(len(mat)):
-        summ += mat[i][i]
-        summ += mat[i][len(mat) -1-i]
-    if len(mat) % 2 == 1:
-        summ -= mat[len(mat) // 2][len(mat) // 2]
+# # a = '-6'
+# # print(a.lstrip('-').isdigit())
+# def diagonal(mat):
+#     summ = 0
+#     for i in range(len(mat)):
+#         summ += mat[i][i]
+#         summ += mat[i][len(mat) -1-i]
+#     if len(mat) % 2 == 1:
+#         summ -= mat[len(mat) // 2][len(mat) // 2]
 
-    return  summ
-    pass
+#     return  summ
+#     pass
 
 
-mat =[[1,1,1,1],
-              [1,1,1,1],
-              [1,1,1,1],
-              [1,1,1,1]]
-# mat = [[1,2,3],
-#               [4,5,6],
-#               [7,8,9]]
-print(diagonal(mat))
+# mat =[[1,1,1,1],
+#               [1,1,1,1],
+#               [1,1,1,1],
+#               [1,1,1,1]]
+# # mat = [[1,2,3],
+# #               [4,5,6],
+# #               [7,8,9]]
+# print(diagonal(mat))
+
+
+
+def numss(nums):
+    numm = float('inf')
+    for i in range(len(nums)-1):
+        a = int(str(nums[i]) + str(nums[i+1]))
+        if a < numm:
+            numm = a
+    return numm
+
+nums = [23,55,42,21]
+print(numss(nums))
