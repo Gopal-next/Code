@@ -19,3 +19,5 @@ print(consecutive_ch(s))
 
 s = 'llmmnnooppqqrrssttuuvvwwxxyyzz'
 print(consecutive_ch(s))
+
+.
