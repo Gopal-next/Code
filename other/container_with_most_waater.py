@@ -1,14 +1,17 @@
 def max_water(height):
-    max_area = 0
-    li = []
-    for i in range(len(height)):
-        for j in range(i+1, len(height)):
-            width = j-i
-
-            area = min(height[i], height[j]) * width 
-            li.append(area)
-            max_area = max(max_area, area)
-    return max_area, li
+    left = 0
+    right = len(height) - 1
+    max_area = 0 
+    while left < right:
+        width = right -left
+        h = min(height[left], height[right])
+        area = width *h
+        max_area = max(max_area, area)
+        if height[left] < height[right]:
+            left += 1
+        else:
+            right -= 1
+    return max_area
 
 
 height = [1,8,6,2,5,4,8,3,7]
